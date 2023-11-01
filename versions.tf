@@ -13,5 +13,10 @@ terraform {
       version = "~> 4.52.0"
     }
   }
+   backend "s3" {
+    bucket = "s3-terraform-statefile-as5.1.1.2"
+    key    = "terraform.tfstate"
+    region = "ap-south-1"
+  }
   required_version = "~> 1.3"
 }
