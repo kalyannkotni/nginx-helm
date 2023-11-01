@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 data "terraform_remote_state" "eks" {
-  backend = "local"
+  backend = "remote"
   config = {
     path = "s3-terraform-statefile-as5.1.1.2/terraform.tfstate"
   }
